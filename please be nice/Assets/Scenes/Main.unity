@@ -4538,9 +4538,9 @@ MonoBehaviour:
   grassFoliageFreq: 0.01
   sandFoliageFreq: 0.01
   desertTempleFreq: 0.0001
-  worldWidth: 20
-  worldHeight: 20
-  chunkSize: 5
+  worldWidth: 200
+  worldHeight: 200
+  chunkSize: 10
   seed: 0
   noiseTexture: {fileID: 0}
   worldChunks: []
