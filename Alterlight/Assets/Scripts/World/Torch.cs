@@ -11,7 +11,7 @@ public class Torch : MonoBehaviour
     {
         light2D = GetComponent<Light2D>();
         light2D.enabled = false;
-        light2D.pointLightOuterRadius = 2.11f;
+        light2D.pointLightOuterRadius = 2.111f;
         light2D.intensity = 0.56f;
     }
     void Update()
