@@ -3348,6 +3348,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1500359800}
+    - target: {fileID: 7535683892201925193, guid: 493dd709f9a008142bf1e7e6ac508e79, type: 3}
+      propertyPath: dayCycle
+      value: 
+      objectReference: {fileID: 1693582734}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493dd709f9a008142bf1e7e6ac508e79, type: 3}
 --- !u!224 &997930769 stripped
@@ -4538,9 +4542,9 @@ MonoBehaviour:
   grassFoliageFreq: 0.01
   sandFoliageFreq: 0.01
   desertTempleFreq: 0.0001
-  worldWidth: 200
-  worldHeight: 200
-  chunkSize: 10
+  worldWidth: 400
+  worldHeight: 400
+  chunkSize: 20
   seed: 0
   noiseTexture: {fileID: 0}
   worldChunks: []

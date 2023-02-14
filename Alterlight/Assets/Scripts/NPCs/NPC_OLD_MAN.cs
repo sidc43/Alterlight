@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Rendering.Universal;
+
 public class NPC_OLD_MAN : MonoBehaviour
 {
     [Header("Attributes")]
@@ -36,6 +38,8 @@ public class NPC_OLD_MAN : MonoBehaviour
     [Header("Other")]
     [SerializeField]
     private InventoryManager invManager;
+    public Light2D light2D;
+    public DayCycle dayCycle;
 
     public void Start()
     {
@@ -56,6 +60,14 @@ public class NPC_OLD_MAN : MonoBehaviour
     {
         HandleMovement();
         Dialogue();
+        ToggleSpotLight();
+    }
+    private void ToggleSpotLight()
+    {
+        if (dayCycle.isDay)
+            light2D.enabled = false;
+        else    
+            light2D.enabled = true;
     }
     private void Dialogue()
     {
