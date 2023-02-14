@@ -1,0 +1,146 @@
+"filename", "language", "HTML", "XML", "JSON", "Log", "ShaderLab", "HLSL", "C#", "comment", "blank", "total"
+"c:\Users\sidc2\please be nice\Assembly-CSharp.csproj", "XML", 0, 924, 0, 0, 0, 0, 0, 7, 1, 932
+"c:\Users\sidc2\please be nice\Assets\Scripts\Inventory\CraftingManager.cs", "C#", 0, 0, 0, 0, 0, 0, 101, 1, 6, 108
+"c:\Users\sidc2\please be nice\Assets\Scripts\Inventory\InventoryItem.cs", "C#", 0, 0, 0, 0, 0, 0, 48, 0, 6, 54
+"c:\Users\sidc2\please be nice\Assets\Scripts\Inventory\InventoryManager.cs", "C#", 0, 0, 0, 0, 0, 0, 113, 3, 17, 133
+"c:\Users\sidc2\please be nice\Assets\Scripts\Inventory\InventorySlot.cs", "C#", 0, 0, 0, 0, 0, 0, 45, 0, 5, 50
+"c:\Users\sidc2\please be nice\Assets\Scripts\Inventory\Item.cs", "C#", 0, 0, 0, 0, 0, 0, 47, 0, 10, 57
+"c:\Users\sidc2\please be nice\Assets\Scripts\Mobs\Beetle.cs", "C#", 0, 0, 0, 0, 0, 0, 130, 0, 12, 142
+"c:\Users\sidc2\please be nice\Assets\Scripts\Mobs\IFriendlyMob.cs", "C#", 0, 0, 0, 0, 0, 0, 7, 0, 2, 9
+"c:\Users\sidc2\please be nice\Assets\Scripts\Mobs\IHostileMob.cs", "C#", 0, 0, 0, 0, 0, 0, 9, 0, 1, 10
+"c:\Users\sidc2\please be nice\Assets\Scripts\NPCs\NPC_OLD_MAN.cs", "C#", 0, 0, 0, 0, 0, 0, 128, 0, 14, 142
+"c:\Users\sidc2\please be nice\Assets\Scripts\Player\Crosshair.cs", "C#", 0, 0, 0, 0, 0, 0, 24, 0, 5, 29
+"c:\Users\sidc2\please be nice\Assets\Scripts\Player\PlayerMovement.cs", "C#", 0, 0, 0, 0, 0, 0, 176, 1, 24, 201
+"c:\Users\sidc2\please be nice\Assets\Scripts\Tile Properties\ConstraintProp.cs", "C#", 0, 0, 0, 0, 0, 0, 34, 1, 9, 44
+"c:\Users\sidc2\please be nice\Assets\Scripts\Tile Properties\WaterProp.cs", "C#", 0, 0, 0, 0, 0, 0, 33, 0, 5, 38
+"c:\Users\sidc2\please be nice\Assets\Scripts\Utilities\DialogueManager.cs", "C#", 0, 0, 0, 0, 0, 0, 68, 0, 5, 73
+"c:\Users\sidc2\please be nice\Assets\Scripts\Utilities\ExtensionMethods.cs", "C#", 0, 0, 0, 0, 0, 0, 82, 0, 14, 96
+"c:\Users\sidc2\please be nice\Assets\Scripts\Utilities\Minimap.cs", "C#", 0, 0, 0, 0, 0, 0, 29, 0, 3, 32
+"c:\Users\sidc2\please be nice\Assets\Scripts\World\CreateNPCBarrier.cs", "C#", 0, 0, 0, 0, 0, 0, 50, 0, 6, 56
+"c:\Users\sidc2\please be nice\Assets\Scripts\World\DayCycle.cs", "C#", 0, 0, 0, 0, 0, 0, 78, 0, 9, 87
+"c:\Users\sidc2\please be nice\Assets\Scripts\World\Door.cs", "C#", 0, 0, 0, 0, 0, 0, 77, 0, 2, 79
+"c:\Users\sidc2\please be nice\Assets\Scripts\World\TerrainGeneration.cs", "C#", 0, 0, 0, 0, 0, 0, 318, 6, 57, 381
+"c:\Users\sidc2\please be nice\Assets\Scripts\World\TileDropController.cs", "C#", 0, 0, 0, 0, 0, 0, 17, 0, 2, 19
+"c:\Users\sidc2\please be nice\Assets\Scripts\World\Torch.cs", "C#", 0, 0, 0, 0, 0, 0, 23, 0, 2, 25
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark01.cs", "C#", 0, 0, 0, 0, 0, 0, 63, 29, 37, 129
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark01_UGUI.cs", "C#", 0, 0, 0, 0, 0, 0, 59, 37, 40, 136
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark02.cs", "C#", 0, 0, 0, 0, 0, 0, 65, 6, 27, 98
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark03.cs", "C#", 0, 0, 0, 0, 0, 0, 73, 1, 19, 93
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\Benchmark04.cs", "C#", 0, 0, 0, 0, 0, 0, 41, 26, 19, 86
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\CameraController.cs", "C#", 0, 0, 0, 0, 0, 0, 198, 25, 69, 292
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\ChatController.cs", "C#", 0, 0, 0, 0, 0, 0, 31, 5, 16, 52
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\DropdownSample.cs", "C#", 0, 0, 0, 0, 0, 0, 15, 0, 5, 20
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\EnvMapAnimator.cs", "C#", 0, 0, 0, 0, 0, 0, 23, 4, 9, 36
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\ObjectSpin.cs", "C#", 0, 0, 0, 0, 0, 0, 50, 4, 15, 69
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\ShaderPropAnimator.cs", "C#", 0, 0, 0, 0, 0, 0, 33, 5, 14, 52
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\SimpleScript.cs", "C#", 0, 0, 0, 0, 0, 0, 24, 15, 20, 59
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\SkewTextExample.cs", "C#", 0, 0, 0, 0, 0, 0, 95, 18, 46, 159
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_DigitValidator.cs", "C#", 0, 0, 0, 0, 0, 0, 19, 5, 4, 28
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_ExampleScript_01.cs", "C#", 0, 0, 0, 0, 0, 0, 37, 9, 19, 65
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_FrameRateCounter.cs", "C#", 0, 0, 0, 0, 0, 0, 91, 11, 33, 135
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_PhoneNumberValidator.cs", "C#", 0, 0, 0, 0, 0, 0, 93, 7, 6, 106
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextEventCheck.cs", "C#", 0, 0, 0, 0, 0, 0, 56, 1, 17, 74
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextEventHandler.cs", "C#", 0, 0, 0, 0, 0, 0, 170, 31, 54, 255
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextInfoDebugTool.cs", "C#", 0, 0, 0, 0, 0, 0, 409, 97, 147, 653
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextSelector_A.cs", "C#", 0, 0, 0, 0, 0, 0, 100, 17, 41, 158
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_TextSelector_B.cs", "C#", 0, 0, 0, 0, 0, 0, 250, 191, 107, 548
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMP_UiFrameRateCounter.cs", "C#", 0, 0, 0, 0, 0, 0, 96, 1, 28, 125
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TMPro_InstructionOverlay.cs", "C#", 0, 0, 0, 0, 0, 0, 55, 6, 24, 85
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TeleType.cs", "C#", 0, 0, 0, 0, 0, 0, 40, 15, 28, 83
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TextConsoleSimulator.cs", "C#", 0, 0, 0, 0, 0, 0, 79, 13, 29, 121
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TextMeshProFloatingText.cs", "C#", 0, 0, 0, 0, 0, 0, 135, 32, 57, 224
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\TextMeshSpawner.cs", "C#", 0, 0, 0, 0, 0, 0, 46, 13, 21, 80
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexColorCycler.cs", "C#", 0, 0, 0, 0, 0, 0, 48, 13, 24, 85
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexJitter.cs", "C#", 0, 0, 0, 0, 0, 0, 105, 26, 44, 175
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexShakeA.cs", "C#", 0, 0, 0, 0, 0, 0, 99, 23, 39, 161
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexShakeB.cs", "C#", 0, 0, 0, 0, 0, 0, 112, 29, 44, 185
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\VertexZoom.cs", "C#", 0, 0, 0, 0, 0, 0, 112, 32, 48, 192
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Examples & Extras\Scripts\WarpTextExample.cs", "C#", 0, 0, 0, 0, 0, 0, 87, 15, 43, 145
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader", "ShaderLab", 0, 0, 0, 0, 109, 0, 0, 2, 33, 144
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader", "ShaderLab", 0, 0, 0, 0, 112, 0, 0, 3, 31, 146
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader", "ShaderLab", 0, 0, 0, 0, 109, 0, 0, 2, 33, 144
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader", "ShaderLab", 0, 0, 0, 0, 243, 0, 0, 4, 71, 318
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader", "ShaderLab", 0, 0, 0, 0, 241, 0, 0, 4, 66, 311
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader", "ShaderLab", 0, 0, 0, 0, 188, 0, 0, 10, 50, 248
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader", "ShaderLab", 0, 0, 0, 0, 183, 0, 0, 8, 50, 241
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader", "ShaderLab", 0, 0, 0, 0, 82, 0, 0, 4, 21, 107
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader", "ShaderLab", 0, 0, 0, 0, 183, 0, 0, 8, 50, 241
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader", "ShaderLab", 0, 0, 0, 0, 103, 0, 0, 8, 28, 139
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader", "ShaderLab", 0, 0, 0, 0, 122, 0, 0, 4, 33, 159
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_SDF.shader", "ShaderLab", 0, 0, 0, 0, 243, 0, 0, 4, 71, 318
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader", "ShaderLab", 0, 0, 0, 0, 97, 0, 0, 0, 20, 117
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMPro.cginc", "HLSL", 0, 0, 0, 0, 0, 63, 0, 2, 20, 85
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc", "HLSL", 0, 0, 0, 0, 0, 122, 0, 2, 34, 158
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc", "HLSL", 0, 0, 0, 0, 0, 62, 0, 10, 14, 86
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc", "HLSL", 0, 0, 0, 0, 0, 76, 0, 7, 19, 102
+"c:\Users\sidc2\please be nice\Assets\TextMesh Pro\Sprites\EmojiOne.json", "JSON", 0, 0, 155, 0, 0, 0, 0, 0, 2, 157
+"c:\Users\sidc2\please be nice\Logs\AssetImportWorker0-prev.log", "Log", 0, 0, 0, 163, 0, 0, 0, 0, 5, 168
+"c:\Users\sidc2\please be nice\Logs\AssetImportWorker0.log", "Log", 0, 0, 0, 3823, 0, 0, 0, 0, 69, 3892
+"c:\Users\sidc2\please be nice\Logs\AssetImportWorker1-prev.log", "Log", 0, 0, 0, 169, 0, 0, 0, 0, 5, 174
+"c:\Users\sidc2\please be nice\Logs\AssetImportWorker1.log", "Log", 0, 0, 0, 3817, 0, 0, 0, 0, 69, 3886
+"c:\Users\sidc2\please be nice\Logs\Packages-Update.log", "Log", 0, 0, 0, 43, 0, 0, 0, 0, 4, 47
+"c:\Users\sidc2\please be nice\Logs\shadercompiler-AssetImportWorker0.log", "Log", 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"c:\Users\sidc2\please be nice\Logs\shadercompiler-UnityShaderCompiler.exe0.log", "Log", 0, 0, 0, 2, 0, 0, 0, 0, 2, 4
+"c:\Users\sidc2\please be nice\Packages\manifest.json", "JSON", 0, 0, 47, 0, 0, 0, 0, 0, 1, 48
+"c:\Users\sidc2\please be nice\Packages\packages-lock.json", "JSON", 0, 0, 529, 0, 0, 0, 0, 0, 1, 530
+"c:\Users\sidc2\please be nice\PsdPlugin.csproj", "XML", 0, 813, 0, 0, 0, 0, 0, 7, 1, 821
+"c:\Users\sidc2\please be nice\Unity.2D.Animation.Editor.csproj", "XML", 0, 995, 0, 0, 0, 0, 0, 7, 1, 1003
+"c:\Users\sidc2\please be nice\Unity.2D.Animation.Runtime.csproj", "XML", 0, 775, 0, 0, 0, 0, 0, 7, 1, 783
+"c:\Users\sidc2\please be nice\Unity.2D.Common.Editor.csproj", "XML", 0, 786, 0, 0, 0, 0, 0, 7, 1, 794
+"c:\Users\sidc2\please be nice\Unity.2D.Common.Runtime.csproj", "XML", 0, 752, 0, 0, 0, 0, 0, 7, 1, 760
+"c:\Users\sidc2\please be nice\Unity.2D.IK.Editor.csproj", "XML", 0, 795, 0, 0, 0, 0, 0, 7, 1, 803
+"c:\Users\sidc2\please be nice\Unity.2D.IK.Runtime.csproj", "XML", 0, 753, 0, 0, 0, 0, 0, 7, 1, 761
+"c:\Users\sidc2\please be nice\Unity.2D.Path.Editor.csproj", "XML", 0, 811, 0, 0, 0, 0, 0, 7, 1, 819
+"c:\Users\sidc2\please be nice\Unity.2D.PixelPerfect.Editor.csproj", "XML", 0, 772, 0, 0, 0, 0, 0, 7, 1, 780
+"c:\Users\sidc2\please be nice\Unity.2D.PixelPerfect.csproj", "XML", 0, 744, 0, 0, 0, 0, 0, 7, 1, 752
+"c:\Users\sidc2\please be nice\Unity.2D.Psdimporter.Editor.csproj", "XML", 0, 819, 0, 0, 0, 0, 0, 7, 1, 827
+"c:\Users\sidc2\please be nice\Unity.2D.Sprite.Editor.csproj", "XML", 0, 802, 0, 0, 0, 0, 0, 7, 1, 810
+"c:\Users\sidc2\please be nice\Unity.2D.SpriteShape.Editor.csproj", "XML", 0, 803, 0, 0, 0, 0, 0, 7, 1, 811
+"c:\Users\sidc2\please be nice\Unity.2D.SpriteShape.Runtime.csproj", "XML", 0, 769, 0, 0, 0, 0, 0, 7, 1, 777
+"c:\Users\sidc2\please be nice\Unity.2D.Tilemap.Editor.csproj", "XML", 0, 810, 0, 0, 0, 0, 0, 7, 1, 818
+"c:\Users\sidc2\please be nice\Unity.2D.Tilemap.Extras.Editor.csproj", "XML", 0, 783, 0, 0, 0, 0, 0, 7, 1, 791
+"c:\Users\sidc2\please be nice\Unity.2D.Tilemap.Extras.csproj", "XML", 0, 747, 0, 0, 0, 0, 0, 7, 1, 755
+"c:\Users\sidc2\please be nice\Unity.Burst.CodeGen.csproj", "XML", 0, 729, 0, 0, 0, 0, 0, 7, 1, 737
+"c:\Users\sidc2\please be nice\Unity.Burst.Editor.csproj", "XML", 0, 779, 0, 0, 0, 0, 0, 7, 1, 787
+"c:\Users\sidc2\please be nice\Unity.Burst.csproj", "XML", 0, 793, 0, 0, 0, 0, 0, 7, 1, 801
+"c:\Users\sidc2\please be nice\Unity.CollabProxy.Editor.csproj", "XML", 0, 914, 0, 0, 0, 0, 0, 7, 1, 922
+"c:\Users\sidc2\please be nice\Unity.InternalAPIEditorBridge.001.csproj", "XML", 0, 771, 0, 0, 0, 0, 0, 7, 1, 779
+"c:\Users\sidc2\please be nice\Unity.InternalAPIEngineBridge.001.csproj", "XML", 0, 742, 0, 0, 0, 0, 0, 7, 1, 750
+"c:\Users\sidc2\please be nice\Unity.Mathematics.Editor.csproj", "XML", 0, 771, 0, 0, 0, 0, 0, 7, 1, 779
+"c:\Users\sidc2\please be nice\Unity.Mathematics.csproj", "XML", 0, 829, 0, 0, 0, 0, 0, 7, 1, 837
+"c:\Users\sidc2\please be nice\Unity.PlasticSCM.Editor.csproj", "XML", 0, 1048, 0, 0, 0, 0, 0, 7, 1, 1056
+"c:\Users\sidc2\please be nice\Unity.Rider.Editor.csproj", "XML", 0, 758, 0, 0, 0, 0, 0, 7, 1, 766
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Analytics.csproj", "XML", 0, 746, 0, 0, 0, 0, 0, 7, 1, 754
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Configuration.Editor.csproj", "XML", 0, 782, 0, 0, 0, 0, 0, 7, 1, 790
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Configuration.csproj", "XML", 0, 760, 0, 0, 0, 0, 0, 7, 1, 768
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Device.csproj", "XML", 0, 751, 0, 0, 0, 0, 0, 7, 1, 759
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Editor.csproj", "XML", 0, 867, 0, 0, 0, 0, 0, 7, 1, 875
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Environments.Internal.csproj", "XML", 0, 746, 0, 0, 0, 0, 0, 7, 1, 754
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Environments.csproj", "XML", 0, 750, 0, 0, 0, 0, 0, 7, 1, 758
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Internal.csproj", "XML", 0, 809, 0, 0, 0, 0, 0, 7, 1, 817
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Networking.csproj", "XML", 0, 751, 0, 0, 0, 0, 0, 7, 1, 759
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Registration.csproj", "XML", 0, 778, 0, 0, 0, 0, 0, 7, 1, 786
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Scheduler.csproj", "XML", 0, 755, 0, 0, 0, 0, 0, 7, 1, 763
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Telemetry.csproj", "XML", 0, 782, 0, 0, 0, 0, 0, 7, 1, 790
+"c:\Users\sidc2\please be nice\Unity.Services.Core.Threading.csproj", "XML", 0, 750, 0, 0, 0, 0, 0, 7, 1, 758
+"c:\Users\sidc2\please be nice\Unity.Services.Core.csproj", "XML", 0, 752, 0, 0, 0, 0, 0, 7, 1, 760
+"c:\Users\sidc2\please be nice\Unity.TextMeshPro.Editor.csproj", "XML", 0, 815, 0, 0, 0, 0, 0, 7, 1, 823
+"c:\Users\sidc2\please be nice\Unity.TextMeshPro.csproj", "XML", 0, 799, 0, 0, 0, 0, 0, 7, 1, 807
+"c:\Users\sidc2\please be nice\Unity.Timeline.Editor.csproj", "XML", 0, 1039, 0, 0, 0, 0, 0, 7, 1, 1047
+"c:\Users\sidc2\please be nice\Unity.Timeline.csproj", "XML", 0, 813, 0, 0, 0, 0, 0, 7, 1, 821
+"c:\Users\sidc2\please be nice\Unity.VSCode.Editor.csproj", "XML", 0, 771, 0, 0, 0, 0, 0, 7, 1, 779
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.Core.Editor.csproj", "XML", 0, 1239, 0, 0, 0, 0, 0, 7, 1, 1247
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.Core.csproj", "XML", 0, 1166, 0, 0, 0, 0, 0, 7, 1, 1174
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.Flow.Editor.csproj", "XML", 0, 942, 0, 0, 0, 0, 0, 7, 1, 950
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.Flow.csproj", "XML", 0, 1146, 0, 0, 0, 0, 0, 7, 1, 1154
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.SettingsProvider.Editor.csproj", "XML", 0, 792, 0, 0, 0, 0, 0, 7, 1, 800
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.Shared.Editor.csproj", "XML", 0, 788, 0, 0, 0, 0, 0, 7, 1, 796
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.State.Editor.csproj", "XML", 0, 851, 0, 0, 0, 0, 0, 7, 1, 859
+"c:\Users\sidc2\please be nice\Unity.VisualScripting.State.csproj", "XML", 0, 779, 0, 0, 0, 0, 0, 7, 1, 787
+"c:\Users\sidc2\please be nice\Unity.VisualStudio.Editor.csproj", "XML", 0, 763, 0, 0, 0, 0, 0, 7, 1, 771
+"c:\Users\sidc2\please be nice\UnityEditor.TestRunner.csproj", "XML", 0, 872, 0, 0, 0, 0, 0, 7, 1, 880
+"c:\Users\sidc2\please be nice\UnityEditor.UI.csproj", "XML", 0, 796, 0, 0, 0, 0, 0, 7, 1, 804
+"c:\Users\sidc2\please be nice\UnityEngine.TestRunner.csproj", "XML", 0, 802, 0, 0, 0, 0, 0, 7, 1, 810
+"c:\Users\sidc2\please be nice\UnityEngine.UI.csproj", "XML", 0, 815, 0, 0, 0, 0, 0, 7, 1, 823
+"c:\Users\sidc2\please be nice\UpgradeLog.htm", "HTML", 240, 0, 0, 0, 0, 0, 0, 1, 32, 273
+"Total", "-", 240, 49354, 731, 8019, 2015, 323, 4646, 1277, 2305, 68910

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a75cebebfb4af54095d41fb02f51ad3, type: 3}
+  m_Name: Basic Axe
+  m_EditorClassIdentifier: 
+  useTime: 1
+  stackSize: 1
+  type: 1
+  damage: 3
+  actionType: 0300000004000000
+  range: {x: 3, y: 3}
+  stackable: 0
+  itemObject: {fileID: 3007172328180352566, guid: 763082d73d6c0d54889dea1cfec543fd, type: 3}
+  requiredItemsToCraft:
+  - {fileID: 11400000, guid: 5c4d51b46f303dc4bbe5faaefce9011a, type: 2}
+  - {fileID: 11400000, guid: 2456e361b4b14ff45b1d89dfb6701377, type: 2}
+  - {fileID: 11400000, guid: 9cca399de9734724fac13e2b9cf88253, type: 2}
+  - {fileID: 11400000, guid: 8b0490abcc5477348a491033ffbb6a87, type: 2}
+  correspondingCount: 05000000040000000200000001000000
