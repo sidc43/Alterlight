@@ -202,8 +202,6 @@ public class TerrainGeneration : MonoBehaviour
         worldTiles.Add(newTile.transform.position - (Vector3.one * 0.5f));
         worldTileObjects.Add(newTile);
     }
-
-    //? Duplication glitch fixed (come back to this and the ContainsAny method if any other bug arises)
     public bool PlayerPlaceTile(Item item, string n, Sprite spr, int x, int y)
     {
         bool isAllBuildingBlockAlready = ContainsAny(GetTile(x, y).name, buildingBlocksAll);
