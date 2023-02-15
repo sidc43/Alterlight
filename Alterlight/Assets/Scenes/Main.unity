@@ -4532,6 +4532,8 @@ MonoBehaviour:
   open: {fileID: 21300000, guid: ee7e0ec950211d948b95c5f87a0dc2bc, type: 3}
   sidewaysClosed: {fileID: 21300000, guid: 4efa77f93970e52449b9c4b55ef5f3ca, type: 3}
   sidewaysOpen: {fileID: 21300000, guid: 4b791fb69ae950247821996efc94a0a2, type: 3}
+  torchParticleSprite: {fileID: 1935641764, guid: 73fbb99c8b27e454691bf60eda2e085e, type: 3}
+  defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   mobParent: {fileID: 290924014}
   beetle: {fileID: 3122624757947988389, guid: 2f8a956b9b3f36146a4fa5cde082c423, type: 3}
   beetleSpawnRate: 0.001

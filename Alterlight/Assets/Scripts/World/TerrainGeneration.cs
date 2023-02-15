@@ -24,6 +24,8 @@ public class TerrainGeneration : MonoBehaviour
     public Sprite open;
     public Sprite sidewaysClosed;
     public Sprite sidewaysOpen;
+    public Sprite torchParticleSprite;
+    public Material defaultMaterial;
 
     [Header("Mobs")]
     public GameObject mobParent;
@@ -242,6 +244,8 @@ public class TerrainGeneration : MonoBehaviour
                 newTile.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 Torch t = newTile.AddComponent<Torch>();
                 t.dayCycle = dayCycle;
+                t.torchParticle = torchParticleSprite;
+                t.material = defaultMaterial;
             }
 
             if (n == "door")
