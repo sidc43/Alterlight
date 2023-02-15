@@ -9,8 +9,9 @@ using static ExtensionMethods.ExtensionMethods;
 
 public class TerrainGeneration : MonoBehaviour
 {
-    #region Attributes
+    #region Fields
 
+    #region Sprites
     [Header("Tile Sprites")]
     public Sprite sand;
     public Sprite sandFoliage;
@@ -26,14 +27,15 @@ public class TerrainGeneration : MonoBehaviour
     public Sprite sidewaysOpen;
     public Sprite torchParticleSprite;
     public Material defaultMaterial;
+    #endregion
 
+    #region World Generation Settings
     [Header("Mobs")]
     public GameObject mobParent;
     public GameObject beetle;
     [Range(0.0f, 1.0f)]
     public float beetleSpawnRate;
     private int beetleCount = 0;
-
 
     [Header("Structures")]
     public GameObject desertTemple;
@@ -51,6 +53,7 @@ public class TerrainGeneration : MonoBehaviour
     public float sandFoliageFreq;
     [Range(0.0f, 1.0f)]
     public float desertTempleFreq;
+    private int doorCount = 0;
 
     [Header("World Settings")]
     public int worldWidth = 200;
@@ -68,16 +71,18 @@ public class TerrainGeneration : MonoBehaviour
     public List<GameObject> worldTileObjects = new List<GameObject>();
     public PlayerMovement player;
     public DayCycle dayCycle;
+    #endregion
 
+    #region Building Settings
     [Header("Private fields")]
     private List<string> mainTiles = new List<string>{ "grass", "sand", "water", "snow", "grassfoliage", "sandfoliage" }; //? World tiles (unbreakable)
     private List<string> unplaceableTiles = new List<string>{ "water", "tree", "snowtree" }; //? Player can't build over these (world tiles, use List<string>.Contains(string))
     private List<string> buildingBlocksCol = new List<string>{ "stoneblock", "woodblock", "door" }; //? Player can't build over these (require collider, use ContainsAny(string, List<string>))
     private List<string> buildingBlocksAll = new List<string>{ "stoneblock", "woodblock", "door", "torch" }; //? Player can't build over these (all. ContainsAny(string, List<string>))
-    public GameObject oldTile;
     private List<Item> placedItems = new List<Item>();
     private List<Vector2> itemPosition = new List<Vector2>();
-    private int doorCount = 0;
+    public GameObject oldTile;
+    #endregion
 
     #endregion
 
