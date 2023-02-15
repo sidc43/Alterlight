@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using static ExtensionMethods.ExtensionMethods;
 
 public class Torch : MonoBehaviour
 {
