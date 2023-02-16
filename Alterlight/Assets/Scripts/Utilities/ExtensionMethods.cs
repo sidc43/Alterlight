@@ -92,5 +92,17 @@ namespace ExtensionMethods
             
             return (!itemsEqual.Contains(false) && !hasCount.Contains(false));
         }
+
+        public static float Magnitude(this Vector3 vector) { return (float)Math.Sqrt(vector.x * vector.x + vector.y * vector.y + vector.z * vector.z); }
+
+        public static Vector3 Normalize(this Vector3 value)
+        {
+            const float kEpsilon = 0.00001f;
+            float mag = Magnitude(value);
+            if (mag > kEpsilon)
+                return value / mag;
+            else
+                return Vector3.zero;
+        }
     }
 }
