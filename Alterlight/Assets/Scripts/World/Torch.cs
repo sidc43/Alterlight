@@ -37,8 +37,11 @@ public class Torch : MonoBehaviour
         ParticleSystem.MainModule _main = particle.main;
         _main.duration = 0.1f;
         _main.startSpeed = 1.28f;
-        _main.startSize = 0.4f;
+        _main.startSize = 0.7f;
         _main.maxParticles = 30;
+        _main.startLifetime = 2;
+        _main.simulationSpace = ParticleSystemSimulationSpace.World;
+        
 
         particle.Play();
 
@@ -48,7 +51,8 @@ public class Torch : MonoBehaviour
 
         ParticleSystem.ShapeModule _shape = particle.shape;
         _shape.enabled = true;
-        _shape.shapeType = ParticleSystemShapeType.Box;
+        _shape.shapeType = ParticleSystemShapeType.SingleSidedEdge;
+        _shape.radius = 0.4f;
         _shape.sprite = torchParticle;
 
         ParticleSystem.SizeOverLifetimeModule _sizeOverLifeTime = particle.sizeOverLifetime;
