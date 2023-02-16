@@ -98,7 +98,7 @@ namespace ExtensionMethods
         public static Vector3 Normalize(this Vector3 value)
         {
             const float kEpsilon = 0.00001f;
-            float mag = Magnitude(value);
+            float mag = value.Magnitude();
             if (mag > kEpsilon)
                 return value / mag;
             else
