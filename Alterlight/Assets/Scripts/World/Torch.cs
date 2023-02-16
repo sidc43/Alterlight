@@ -24,10 +24,7 @@ public class Torch : MonoBehaviour
     }
     void Update()
     {
-        if (dayCycle.isDay)
-            light2D.enabled = false;
-        else if (!dayCycle.isDay)
-            light2D.enabled = true;
+        ToggleLight();
     }
 
     private void IntitializeParticleComponent()
@@ -68,5 +65,9 @@ public class Torch : MonoBehaviour
         ParticleSystemRenderer _renderer = particle.GetComponent<ParticleSystemRenderer>();
         _renderer.sortingOrder = 1;
         _renderer.material = material;
+    }
+    private void ToggleLight()
+    {
+        light2D.enabled = !dayCycle.isDay;
     }
 }
