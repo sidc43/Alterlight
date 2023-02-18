@@ -41,7 +41,7 @@ public class NPC_OLD_MAN : MonoBehaviour
     public Light2D light2D;
     public DayCycle dayCycle;
 
-    public void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
@@ -52,16 +52,13 @@ public class NPC_OLD_MAN : MonoBehaviour
 
         claim = dialogueBox.GetComponent<DialogueManager>().button;
     }
-    public Vector2 GetSpawnPoint()
-    {
-        return this.spawnPoint;
-    }
-    void Update()
+    private void Update()
     {
         HandleMovement();
         Dialogue();
         ToggleSpotLight();
     }
+    public Vector2 GetSpawnPoint() => this.spawnPoint;
     private void ToggleSpotLight()
     {
         if (dayCycle.isDay)
@@ -144,7 +141,7 @@ public class NPC_OLD_MAN : MonoBehaviour
             inRange = false;
         }
     }
-    public void ChooseDirection()
+    private void ChooseDirection()
     {
         WalkDirection = Random.Range(0, 4);
         isWalking = true;

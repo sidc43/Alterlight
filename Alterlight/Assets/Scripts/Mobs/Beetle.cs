@@ -19,7 +19,7 @@ public class Beetle : MonoBehaviour, IFriendlyMob
     private float waitCounter;
     private int WalkDirection;
     private Vector2 mousePos;
-    void Start()
+    private void Start()
     {
         this.walkTime = Random.Range(3, 6);
         this.waitTime = Random.Range(1, 4);
@@ -31,7 +31,7 @@ public class Beetle : MonoBehaviour, IFriendlyMob
         this.walkCounter = this.walkTime;
         
     }
-    void Update()
+    private void Update()
     {   
         GetMousePosition();
         HandleDamage();

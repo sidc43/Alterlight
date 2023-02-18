@@ -25,14 +25,8 @@ public class DayCycle : MonoBehaviour
     [SerializeField] float nightMinOuteRadiusrTarget;
     [SerializeField] float nightMinIntensityTarget;
 
-    private void Start()
-    {
-        sw.Start();
-    }
-    private void Update() 
-    {
-        ToggleDayNight();
-    }
+    private void Start() => sw.Start();
+    private void Update() => ToggleDayNight();
     private void FixedUpdate()
     {
         if (!dontCycleLight)

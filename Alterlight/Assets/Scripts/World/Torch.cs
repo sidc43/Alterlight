@@ -11,7 +11,7 @@ public class Torch : MonoBehaviour
     public Sprite torchParticle;
     private ParticleSystem particle;
     public Material material;
-    void Start()
+    private void Start()
     {
         this.gameObject.AddComponent<ParticleSystem>();
         light2D = GetComponent<Light2D>();
@@ -22,11 +22,8 @@ public class Torch : MonoBehaviour
         particle = GetComponent<ParticleSystem>();
         IntitializeParticleComponent();
     }
-    void Update()
-    {
-        ToggleLight();
-    }
-
+    private void Update() => ToggleLight();
+    private void ToggleLight() => light2D.enabled = !dayCycle.isDay;
     private void IntitializeParticleComponent()
     {
         particle.Stop();
@@ -65,9 +62,5 @@ public class Torch : MonoBehaviour
         ParticleSystemRenderer _renderer = particle.GetComponent<ParticleSystemRenderer>();
         _renderer.sortingOrder = 1;
         _renderer.material = material;
-    }
-    private void ToggleLight()
-    {
-        light2D.enabled = !dayCycle.isDay;
     }
 }

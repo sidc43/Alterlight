@@ -10,45 +10,46 @@ public class PlayerMovement : MonoBehaviour
 {
     #region Fields
     [Header("Debugging")]
-    public TextMeshProUGUI playerPosText;
-    public TextMeshProUGUI mousePosText;
-    public TextMeshProUGUI hoveringTile;
-    public TextMeshProUGUI levelText;
+    [SerializeField] private TextMeshProUGUI playerPosText;
+    [SerializeField] private TextMeshProUGUI mousePosText;
+    [SerializeField] private TextMeshProUGUI hoveringTile;
+    [SerializeField] private TextMeshProUGUI levelText;
 
     [Header("Attributes")]
-    public const float defaultSpeed = 4f;
-    public const float maxHealth = 100;
     public float speed = defaultSpeed;
     public float sprintSpeed = 5.5f;
     public float health = maxHealth;
     public int defense = 5;
     public int exp = 0;
     public int level = 0;
+    public int expForNextLvl;
     public Item[] starting;
-    private int expForNextLvl;
+    public const float defaultSpeed = 4f;
+    public const float maxHealth = 100;
 
     [Header("Inventory")]
     public InventoryManager inventoryManager;
 
     [Header("Functionality")]
-    public Rigidbody2D rb;
-    public Animator animator;
-    public Vector2 movement;
-    GameObject itemOnScreen = null;
-    public Vector2Int mousePos;
-    public TerrainGeneration terrainGenerator;
-    public Camera cam;
+    [SerializeField] private HealthBar healthBar;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Vector2 movement;
+    [SerializeField] private GameObject itemOnScreen = null;
+    [SerializeField] private Vector2Int mousePos;
+    [SerializeField] private TerrainGeneration terrainGenerator;
+    [SerializeField] private Camera cam;
     public Vector2 lastDirFaced;
-    //private float useTimeCounter = 0;
     #endregion
 
-    void Start()
+    private void Start()
     {
         foreach (Item i in starting)
             inventoryManager.AddItem(i);
-    }
 
-    void Update()
+        healthBar.SetMaxHealth(health);
+    }
+    private void Update()
     {
         GetMousePosition();
         HandlePlayerMovement();
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         if (rightClick && inventoryManager.AnyInHotbar())
             HandleRightClickActions(item);
     }
-    void FixedUpdate() 
+    private void FixedUpdate() 
     {
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
@@ -197,5 +198,4 @@ public class PlayerMovement : MonoBehaviour
         mousePos.x = Mathf.RoundToInt(worldPoint.x - 0.5f);
         mousePos.y = Mathf.RoundToInt(worldPoint.y - 0.5f);
     }
-    
 }
