@@ -96,15 +96,17 @@ public class PlayerMovement : MonoBehaviour
         DestroyItem();
 
         item = inventoryManager.GetSelectedItem(false);
-        if (item.type != ItemType.BuildingBlock || item.type != ItemType.Consumable)
+        if (item.mainType != MainType.Tile || item.mainType != MainType.Consumable)
         {
             switch (item.type)
             {
-                case ItemType.Tool:
-                
+                case ItemType.Axe:
+                case ItemType.Pickaxe:
                     if (IsInRange(mousePos.x, mousePos.y, item))
-                        terrainGenerator.BreakTile(mousePos.x, mousePos.y);
-
+                    {
+                        Print(terrainGenerator.GetTile(mousePos.x, mousePos.y));
+                        terrainGenerator.BreakTile(mousePos.x, mousePos.y, item);
+                    }
                     break;
 
                 case ItemType.Melee:
@@ -115,9 +117,9 @@ public class PlayerMovement : MonoBehaviour
     private void HandleRightClickActions(Item item)
     {
         item = inventoryManager.GetSelectedItem(false);
-        switch (item.type)
+        switch (item.mainType)
         {
-            case ItemType.BuildingBlock:
+            case MainType.Tile:
                 if (IsInRange(mousePos.x, mousePos.y, item))
                 {
                     bool canPlace = terrainGenerator.PlayerPlaceTile(item, item.itemObject.name, item.itemObject.GetComponent<SpriteRenderer>().sprite, mousePos.x, mousePos.y);
@@ -126,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 break;
 
-            case ItemType.Consumable:
+            case MainType.Consumable:
                 break;
         }
     }
@@ -146,8 +148,6 @@ public class PlayerMovement : MonoBehaviour
             case ItemType.Ranged:
                 break;
             case ItemType.Magic:
-                break;
-            case ItemType.Tool:
                 break;
                 
         }

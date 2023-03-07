@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useTime: 1
   stackSize: 1
-  type: 1
+  mainType: 1
+  type: 0
+  defaultTileHealth: 0
+  tileHealth: 0
   damage: 3
+  blockDamage: 3
   actionType: 0300000004000000
   range: {x: 3, y: 3}
   stackable: 0

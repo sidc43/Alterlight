@@ -4700,25 +4700,29 @@ MonoBehaviour:
   sand: {fileID: 21300000, guid: 6727bccc108c7e045a18e2d6ba82eb46, type: 3}
   sandFoliage: {fileID: 21300000, guid: 5583f7424a008b84c929b45e37a2902f, type: 3}
   grass: {fileID: 21300000, guid: f6cd4733496e45744bbb6ddf501b58a1, type: 3}
+  grassHole: {fileID: 21300000, guid: d6e56e0d9e2c0844d96eae58d3887f7c, type: 3}
   grassFoliage: {fileID: 21300000, guid: 0f2d2138b329e6b4a9dc83990cdeae97, type: 3}
-  tree: {fileID: 21300000, guid: bfb599c8fcd927742a74c6f650deed4f, type: 3}
+  tree: {fileID: 21300000, guid: 97e193790e310ca4cbe587a6752866b9, type: 3}
   snow: {fileID: 21300000, guid: ac556c300c3d2924caf8477ce0c87e5d, type: 3}
-  snowTree: {fileID: 21300000, guid: 498a6223a29010f4fa7427c5bcdb1fad, type: 3}
+  snowTree: {fileID: 21300000, guid: 248eba8fe2bafcb47969ff07558d6a39, type: 3}
   water: {fileID: 21300000, guid: 3435d9d10f394724b9cb08b509c5567e, type: 3}
   closed: {fileID: 21300000, guid: a02d982d158aaf8448431dd4b93ab7df, type: 3}
   open: {fileID: 21300000, guid: ee7e0ec950211d948b95c5f87a0dc2bc, type: 3}
   sidewaysClosed: {fileID: 21300000, guid: 4efa77f93970e52449b9c4b55ef5f3ca, type: 3}
   sidewaysOpen: {fileID: 21300000, guid: 4b791fb69ae950247821996efc94a0a2, type: 3}
   torchParticleSprite: {fileID: 1935641764, guid: 73fbb99c8b27e454691bf60eda2e085e, type: 3}
+  promptSprite: {fileID: 21300000, guid: 3a4d4c551c458b04f877f68acfc9ad7c, type: 3}
   defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   mobParent: {fileID: 290924014}
   beetle: {fileID: 3122624757947988389, guid: 2f8a956b9b3f36146a4fa5cde082c423, type: 3}
   beetleSpawnRate: 0.001
   desertTemple: {fileID: 6274019024388078729, guid: e80936501e070864f8397c297652c701, type: 3}
+  cavePrompt: {fileID: 0}
   noiseFreq: 0.015
   treeChance: 0.01
   snowTreeChance: 0.03
   grassFoliageFreq: 0.01
+  grassCaveFreq: 0.001
   sandFoliageFreq: 0.01
   desertTempleFreq: 0.0001
   worldWidth: 100
@@ -5279,6 +5283,7 @@ MonoBehaviour:
   defense: 5
   exp: 0
   level: 0
+  expForNextLvl: 0
   starting:
   - {fileID: 11400000, guid: 5cd1f4d12f6f36142ae9a75f83e0ccda, type: 2}
   - {fileID: 11400000, guid: a83b0a8c9cf7ddb48bfffbaa9350a05e, type: 2}
@@ -5351,6 +5356,7 @@ MonoBehaviour:
   rb: {fileID: 1500359802}
   animator: {fileID: 1500359804}
   movement: {x: 0, y: 0}
+  itemOnScreen: {fileID: 0}
   mousePos: {x: 0, y: 0}
   terrainGenerator: {fileID: 1375648717}
   cam: {fileID: 519420031}

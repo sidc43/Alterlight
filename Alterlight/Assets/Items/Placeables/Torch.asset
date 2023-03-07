@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a75cebebfb4af54095d41fb02f51ad3, type: 3}
   m_Name: Torch
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
-  useable: 1
   useTime: 0
   stackSize: 100
+  mainType: 0
   type: 0
+  defaultTileHealth: 1
+  tileHealth: 1
+  damage: 0
+  blockDamage: 0
   actionType: 
   range: {x: 3, y: 3}
   stackable: 1
   itemObject: {fileID: 8660216822910086067, guid: e4f40f66346538f4da09155191cbde17, type: 3}
+  requiredItemsToCraft: []
+  correspondingCount: 

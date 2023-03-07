@@ -16,6 +16,7 @@ public class TerrainGeneration : MonoBehaviour
     public Sprite sand;
     public Sprite sandFoliage;
     public Sprite grass;
+    public Sprite grassHole;
     public Sprite grassFoliage;
     public Sprite tree;
     public Sprite snow;
@@ -26,6 +27,7 @@ public class TerrainGeneration : MonoBehaviour
     public Sprite sidewaysClosed;
     public Sprite sidewaysOpen;
     public Sprite torchParticleSprite;
+    public Sprite promptSprite;
     public Material defaultMaterial;
     #endregion
 
@@ -39,6 +41,7 @@ public class TerrainGeneration : MonoBehaviour
 
     [Header("Structures")]
     public GameObject desertTemple;
+    public GameObject cavePrompt;
 
     [Header("Frequency Settings")]
     [Range(0.0f, 1.0f)]
@@ -49,6 +52,8 @@ public class TerrainGeneration : MonoBehaviour
     public float snowTreeChance;
     [Range(0.0f, 1.0f)]
     public float grassFoliageFreq;
+    [Range(0.0f, 1.0f)]
+    public float grassCaveFreq;
     [Range(0.0f, 1.0f)]
     public float sandFoliageFreq;
     [Range(0.0f, 1.0f)]
@@ -158,12 +163,12 @@ public class TerrainGeneration : MonoBehaviour
                     System.Random r = new System.Random();
                     if (r.NextDouble() < grassFoliageFreq)
                         CreateTile("grassfoliage", grassFoliage, x, y);
+                    else if (r.NextDouble() < treeChance)
+                        CreateTile("tree", tree, x, y);
+                    else if (r.NextDouble() <  grassCaveFreq)
+                        CreateTile("grasscaveEntry", grassHole, x, y);
                     else
-                    {
                         CreateTile("grass", grass, x, y);
-                        if (r.NextDouble() < treeChance)
-                            CreateTile("tree", tree, x, y);
-                    }
                 }
                 #endregion
 
@@ -171,9 +176,10 @@ public class TerrainGeneration : MonoBehaviour
                 else 
                 {
                     System.Random r = new System.Random();
-                    CreateTile("snow", snow, x, y);
-                        if (r.NextDouble() < snowTreeChance)
-                            CreateTile("snowtree", snowTree, x, y);
+                    if (r.NextDouble() < snowTreeChance)
+                        CreateTile("snowtree", snowTree, x, y);
+                    else
+                        CreateTile("snow", snow, x, y);
                 }
                 #endregion
             }
@@ -190,7 +196,7 @@ public class TerrainGeneration : MonoBehaviour
 
         newTile.AddComponent<SpriteRenderer>();
         newTile.GetComponent<SpriteRenderer>().sprite = sprite;
-        if (n == "tree" || n == "snow tree")
+        if (n == "tree" || n == "snowtree")
         {
             newTile.GetComponent<SpriteRenderer>().sortingOrder = 3;
             newTile.AddComponent<BoxCollider2D>();
@@ -200,6 +206,20 @@ public class TerrainGeneration : MonoBehaviour
         if (n == "water")
         {
             newTile.AddComponent<WaterProp>();
+        }
+        if (n == "grasscaveEntry")
+        {
+            cavePrompt = new GameObject();
+            cavePrompt.name = "cavePrompt";
+            cavePrompt.transform.parent = newTile.transform;
+            cavePrompt.AddComponent<SpriteRenderer>();
+            
+            newTile.AddComponent<BoxCollider2D>();
+            newTile.GetComponent<BoxCollider2D>().isTrigger = true;
+
+            newTile.AddComponent<SpritePrompt>();
+            newTile.GetComponent<SpritePrompt>().sprite = promptSprite;
+            newTile.GetComponent<SpritePrompt>().prompt = cavePrompt;
         }
 
         newTile.transform.position = new Vector2(x + 0.5f, y + 0.5f);
@@ -296,7 +316,7 @@ public class TerrainGeneration : MonoBehaviour
             return true;
         }
     }
-    public void BreakTile(int x, int y)
+    public void BreakTile(int x, int y, Item playerItem)
     {
         Item item = null;
 
@@ -307,25 +327,29 @@ public class TerrainGeneration : MonoBehaviour
 
             if (isNotWorldTile)
             {
-                int index = worldTiles.IndexOf(new Vector2(tile.transform.position.x - 0.5f, tile.transform.position.y - 0.5f));
-
-                worldTiles[index] = tile.transform.position - (Vector3.one * 0.5f);
-                worldTileObjects[index] = oldTile;
-
-                Destroy(tile);  
-
-                // Get the item
                 for (int i = 0; i < itemPosition.Count; i++)
                 {
                     if (x == itemPosition[i].x && y == itemPosition[i].y)
                         item = placedItems[i];
                 }
+                item.tileHealth -= playerItem.blockDamage;
 
-                GameObject newTileDrop = Instantiate(tileDrop, new Vector2(x, y + 2), Quaternion.identity);
-                newTileDrop.GetComponent<SpriteRenderer>().sprite = tile.GetComponent<SpriteRenderer>().sprite;
-                newTileDrop.GetComponent<TileDropController>().item = item;
+                if (item.tileHealth <= 0)
+                {
+                    int index = worldTiles.IndexOf(new Vector2(tile.transform.position.x - 0.5f, tile.transform.position.y - 0.5f));
 
-                StartCoroutine(StopTileDrop(newTileDrop, 0.2f));
+                    worldTiles[index] = tile.transform.position - (Vector3.one * 0.5f);
+                    worldTileObjects[index] = oldTile;
+
+                    Destroy(tile);
+
+                    GameObject newTileDrop = Instantiate(tileDrop, new Vector2(x, y + 2), Quaternion.identity);
+                    newTileDrop.GetComponent<SpriteRenderer>().sprite = tile.GetComponent<SpriteRenderer>().sprite;
+                    newTileDrop.GetComponent<TileDropController>().item = item;
+
+                    StartCoroutine(StopTileDrop(newTileDrop, 0.2f));
+                    item.tileHealth = item.defaultTileHealth;
+                }
             }
         }
     }
@@ -348,23 +372,6 @@ public class TerrainGeneration : MonoBehaviour
     {
         if (worldTiles.Contains(new Vector2Int(x, y)) && x >= 0 && x <= worldWidth && y >= 0 && y <= worldHeight)
         {
-            List<int> indices = new List<int>();
-            for (int i = 0; i < worldTiles.Count; i++)
-            {
-                if (worldTiles[i] == new Vector2(x, y))
-                    indices.Add(i);
-            }
-
-            List<GameObject> allObjectsAtPos = new List<GameObject>();
-            foreach (int index in indices)
-                allObjectsAtPos.Add(worldTileObjects[index]);
-            
-            foreach (GameObject g in allObjectsAtPos)
-            {
-                if (g.name == "tree" || g.name == "snowtree")
-                    return g;
-            }
-
             GameObject tile = worldTileObjects[worldTiles.IndexOf(new Vector2(x, y))];
             return tile;  
         }

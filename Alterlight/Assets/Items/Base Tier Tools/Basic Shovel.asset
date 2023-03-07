@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a75cebebfb4af54095d41fb02f51ad3, type: 3}
   m_Name: Basic Shovel
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
-  useable: 0
   useTime: 1
   stackSize: 1
-  type: 1
+  mainType: 1
+  type: 2
+  defaultTileHealth: 0
+  tileHealth: 0
   damage: 1
-  actionType: 0000000003000000
+  blockDamage: 2
+  actionType: 0000000004000000
   range: {x: 3, y: 3}
   stackable: 0
   itemObject: {fileID: 4978327649379813690, guid: d8d29f6798876fe40b9017027efc3525, type: 3}
+  requiredItemsToCraft: []
+  correspondingCount: 
