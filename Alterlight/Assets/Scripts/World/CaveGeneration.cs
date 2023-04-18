@@ -8,20 +8,14 @@ using TMPro;
 using NaughtyAttributes;
 using static ExtensionMethods.ExtensionMethods;
 
-public class TerrainGeneration : MonoBehaviour
+public class CaveGeneration : MonoBehaviour
 {
     #region Fields
+
     #region Sprites
     [Header("Tile Sprites")]
-    public Sprite sand;
-    public Sprite sandFoliage;
-    public Sprite grass;
-    public Sprite grassHole;
-    public Sprite grassFoliage;
+    public Sprite caveFloor;
     public Sprite water;
-    public Sprite tree;
-    public Sprite snow;
-    public Sprite snowTree;
     public Sprite closed;
     public Sprite open;
     public Sprite sidewaysClosed;
@@ -32,33 +26,10 @@ public class TerrainGeneration : MonoBehaviour
     #endregion
 
     #region World Generation Settings
-    [Header("Mobs")]
-    public GameObject mobParent;
-    public GameObject beetle;
-    [Range(0.0f, 1.0f)]
-    public float beetleSpawnRate;
-    private int beetleCount = 0;
-
-    [Header("Structures")]
-    public GameObject desertTemple;
-    public GameObject cavePrompt;
-    private int grasscaveEntryCount = 0;
 
     [Header("Frequency Settings")]
     [Range(0.0f, 1.0f)]
     public float noiseFreq = 0.03f;
-    [Range(0.0f, 1.0f)]
-    public float treeChance;
-    [Range(0.0f, 1.0f)]
-    public float snowTreeChance;
-    [Range(0.0f, 1.0f)]
-    public float grassFoliageFreq;
-    [Range(0.0f, 1.0f)]
-    public float grassCaveFreq;
-    [Range(0.0f, 1.0f)]
-    public float sandFoliageFreq;
-    [Range(0.0f, 1.0f)]
-    public float desertTempleFreq;
     private int doorCount = 0;
 
     [Header("World Settings")]
@@ -70,8 +41,6 @@ public class TerrainGeneration : MonoBehaviour
 
     [Header("Misc")]
     public GameObject[] worldChunks;
-    public Vector2 treeColOffset = new Vector2(-0.03381205f, -0.1280592f);
-    public Vector2 treeColSize = new Vector2(0.45925f, 0.480186f);
     public GameObject tileDrop;
     public List<Vector2> worldTiles = new List<Vector2>();
     public List<GameObject> worldTileObjects = new List<GameObject>();
@@ -130,61 +99,12 @@ public class TerrainGeneration : MonoBehaviour
 
                 #region Water
                 if (currColor < 0.2f)
-                {
                     CreateTile("water", water, x, y);
-                }
                 #endregion
 
-                #region Sand
-                else if (currColor >= 0.2f && currColor <= 0.35f)
-                {
-                    System.Random r = new System.Random();
-                    if (r.NextDouble() < sandFoliageFreq)
-                        CreateTile("sandfoliage", sandFoliage, x, y);
-                    else
-                        CreateTile("sand", sand, x, y);
-
-                    if (r.NextDouble() < desertTempleFreq)
-                        Instantiate(desertTemple, new Vector2(x, y), Quaternion.identity);
-                    
-                    if (r.NextDouble() < beetleSpawnRate)
-                    {
-                        beetleCount++;
-                        GameObject b = Instantiate(beetle, new Vector2(x, y), Quaternion.identity);
-                        b.name = $"beetle {beetleCount}";
-                        b.AddComponent<Beetle>();
-                        b.transform.parent = mobParent.transform;
-                    }
-                }
-                #endregion
-
-                #region Grass
-                else if (currColor > 0.35f && currColor <= 0.82f)
-                {
-                    System.Random r = new System.Random();
-                    if (r.NextDouble() < grassFoliageFreq)
-                        CreateTile("grassfoliage", grassFoliage, x, y);
-                    else if (r.NextDouble() < treeChance)
-                        CreateTile("tree", tree, x, y);
-                    else if (r.NextDouble() <  grassCaveFreq)
-                    {
-                        CreateTile("grasscaveEntry" + grasscaveEntryCount, grassHole, x, y);
-                        grasscaveEntryCount++;
-                    }
-                    else
-                        CreateTile("grass", grass, x, y);
-                }
-                #endregion
-
-                #region Snow
-                else 
-                {
-                    System.Random r = new System.Random();
-                    if (r.NextDouble() < snowTreeChance)
-                        CreateTile("snowtree", snowTree, x, y);
-                    else
-                        CreateTile("snow", snow, x, y);
-                }
+                #region Cave Floor
+                else
+                    CreateTile("caveFloor", caveFloor, x, y);
                 #endregion
             }
         }
@@ -200,33 +120,10 @@ public class TerrainGeneration : MonoBehaviour
 
         newTile.AddComponent<SpriteRenderer>();
         newTile.GetComponent<SpriteRenderer>().sprite = sprite;
-        if (n == "tree" || n == "snowtree")
-        {
-            newTile.GetComponent<SpriteRenderer>().sortingOrder = 3;
-            newTile.AddComponent<BoxCollider2D>();
-            newTile.GetComponent<BoxCollider2D>().offset = treeColOffset;
-            newTile.GetComponent<BoxCollider2D>().size = treeColSize;
-        }
+        
         if (n == "water")
         {
             newTile.AddComponent<WaterProp>();
-        }
-        
-        if (n.Contains("grasscaveEntry"))
-        {
-            cavePrompt = new GameObject();
-            cavePrompt.name = "cavePrompt";
-            cavePrompt.transform.parent = newTile.transform;
-            cavePrompt.AddComponent<SpriteRenderer>();
-            
-            newTile.AddComponent<CaveEntryProp>();
-            newTile.AddComponent<BoxCollider2D>();
-            newTile.GetComponent<BoxCollider2D>().isTrigger = true;
-            newTile.AddComponent<BoxCollider2D>();
-
-            newTile.AddComponent<SpritePrompt>();
-            newTile.GetComponent<SpritePrompt>().sprite = promptSprite;
-            newTile.GetComponent<SpritePrompt>().prompt = cavePrompt;
         }
 
         newTile.transform.position = new Vector2(x + 0.5f, y + 0.5f);
@@ -398,11 +295,5 @@ public class TerrainGeneration : MonoBehaviour
         }
 
         noiseTexture.Apply();
-    }
-
-    public enum Mode
-    {
-        Cave,
-        Overworld
     }
 }

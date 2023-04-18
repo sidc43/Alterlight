@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     {
         GetMousePosition();
         HandlePlayerMovement();
-        UpdateDebuggingText();
+        //UpdateDebuggingText();
 
         Item item = null;
         bool leftClick = Input.GetMouseButtonDown(0);
@@ -103,10 +103,7 @@ public class PlayerMovement : MonoBehaviour
                 case ItemType.Axe:
                 case ItemType.Pickaxe:
                     if (IsInRange(mousePos.x, mousePos.y, item))
-                    {
-                        Print(terrainGenerator.GetTile(mousePos.x, mousePos.y));
                         terrainGenerator.BreakTile(mousePos.x, mousePos.y, item);
-                    }
                     break;
 
                 case ItemType.Melee:
