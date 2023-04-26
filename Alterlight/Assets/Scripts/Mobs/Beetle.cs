@@ -68,6 +68,7 @@ public class Beetle : MonoBehaviour, IFriendlyMob
         {
             this.player.exp += this.expReward;
             this.player.CheckLevelUp();
+            this.player.mobsKilled++;
             Destroy(this.gameObject);
         }
 

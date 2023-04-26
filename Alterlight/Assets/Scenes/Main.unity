@@ -5198,7 +5198,7 @@ MonoBehaviour:
   defaultMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   mobParent: {fileID: 290924014}
   beetle: {fileID: 3122624757947988389, guid: 2f8a956b9b3f36146a4fa5cde082c423, type: 3}
-  beetleSpawnRate: 0.001
+  beetleSpawnRate: 0.002
   desertTemple: {fileID: 6274019024388078729, guid: e80936501e070864f8397c297652c701, type: 3}
   cavePrompt: {fileID: 0}
   noiseFreq: 0.015
@@ -5767,6 +5767,7 @@ MonoBehaviour:
   exp: 0
   level: 0
   expForNextLvl: 0
+  mobsKilled: 0
   starting:
   - {fileID: 11400000, guid: 5cd1f4d12f6f36142ae9a75f83e0ccda, type: 2}
   - {fileID: 11400000, guid: a83b0a8c9cf7ddb48bfffbaa9350a05e, type: 2}

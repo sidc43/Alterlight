@@ -1,9 +1,13 @@
+using System.IO;
 using System.Net;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using TMPro;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Serialization;
 using static ExtensionMethods.ExtensionMethods;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public int exp = 0;
     public int level = 0;
     public int expForNextLvl;
+    public int mobsKilled;
     public Item[] starting;
     public const float defaultSpeed = 4f;
     public const float maxHealth = 100;
@@ -48,12 +53,14 @@ public class PlayerMovement : MonoBehaviour
             inventoryManager.AddItem(i);
 
         healthBar.SetMaxHealth(health);
+
+        GetSavedData();
     }
     private void Update()
     {
         GetMousePosition();
         HandlePlayerMovement();
-        //UpdateDebuggingText();
+        UpdateDebuggingText();
 
         Item item = null;
         bool leftClick = Input.GetMouseButtonDown(0);
@@ -68,6 +75,30 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate() 
     {
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
+    }
+    private void OnApplicationQuit() 
+    {
+        string path = @"C:\Users\sidc2\Documents\GitHub\alterlight\Alterlight\Assets\UserData\user_data.json";
+
+        string jsonData = File.ReadAllText(path);
+
+        var d = JsonConvert.DeserializeObject<PlayerSaveData>(jsonData);
+
+        PlayerSaveData updatedData = new PlayerSaveData{ username = d.username, Level = this.level, EXP = this.exp, MobsKilled = this.mobsKilled };
+        string updatedJson = JsonConvert.SerializeObject(updatedData, Formatting.Indented);
+        File.WriteAllText(path, updatedJson);
+    }
+    public void GetSavedData()
+    {
+        string path = @"C:\Users\sidc2\Documents\GitHub\alterlight\Alterlight\Assets\UserData\user_data.json";
+        string jsonData = File.ReadAllText(path);
+
+        PlayerSaveData lastSave = JsonConvert.DeserializeObject<PlayerSaveData>(jsonData);
+
+        this.level = lastSave.Level;
+        this.exp = lastSave.EXP;
+        this.mobsKilled = lastSave.MobsKilled;
+        CheckLevelUp();
     }
     public void CheckLevelUp()
     {
@@ -84,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2Int movementInt = Vector2Int.RoundToInt(transform.position);
         playerPosText.text = $" PLAYER POSITION: Movement - ({movement.x}, {movement.y}) Transform - ({movementInt.x}, {movementInt.y})";
         mousePosText.text = $" MOUSE POSITION: ({mousePos.x}, {mousePos.y})";
-        levelText.text = $" LEVEL: {level}, EXP: {exp}, EXP FOR NEXT LEVEL: {expForNextLvl - exp}";
+        levelText.text = $" LEVEL: {level}, EXP: {exp}, EXP FOR NEXT LEVEL: {expForNextLvl - exp}\nMOBS KILLED: {mobsKilled}";
         GameObject tileH = terrainGenerator.GetTile(mousePos.x, mousePos.y);
         if (tileH != null)
             hoveringTile.text = $" TILE: {tileH.name}\n WORLD TILE INDEX: {terrainGenerator.worldTileObjects.IndexOf(tileH)}";
