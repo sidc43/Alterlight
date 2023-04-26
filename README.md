@@ -10,7 +10,7 @@
 
 - **Crafting system**
 
-- **Save system**
+- **Local save system**
 
 ### In progress
 
