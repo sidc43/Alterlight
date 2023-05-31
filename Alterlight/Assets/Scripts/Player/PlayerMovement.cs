@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public Item[] starting;
     public const float defaultSpeed = 4f;
     public const float maxHealth = 100;
+    private float savedSeed;
 
     [Header("Inventory")]
     public InventoryManager inventoryManager;
@@ -79,52 +80,15 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
-    private async void OnApplicationQuit() 
+    private void OnApplicationQuit() 
     {
         string path = @"C:\Users\sidc2\Documents\GitHub\alterlight\Alterlight\Assets\UserData\user_data.json";
         string jsonData = File.ReadAllText(path);
         PlayerSaveData d = JsonConvert.DeserializeObject<PlayerSaveData>(jsonData);
-        PlayerSaveData updatedData = new PlayerSaveData{ username = d.username, Level = this.level, EXP = this.exp, MobsKilled = this.mobsKilled };
+        this.savedSeed = this.terrainGenerator.seed;
+        PlayerSaveData updatedData = new PlayerSaveData{ username = d.username, Level = this.level, EXP = this.exp, MobsKilled = this.mobsKilled, seed = this.savedSeed, x = this.transform.position.x, y = this.transform.position.y };
         string updatedJson = JsonConvert.SerializeObject(updatedData, Formatting.Indented);
         File.WriteAllText(path, updatedJson);
-
-        dynamic test = await MakeReq("https://api.jsonbin.io/v3/b/62bfeeed449a1f382128468b/latest");
-        bool foundUser = false;
-        string binid = "";
-
-        foreach (var prop in test.record)
-        {
-            if (d.username == prop.Name)
-            {
-                Print("Found User");
-                foundUser = true;
-                binid = test.record[d.username];
-                break;
-            }
-        }
-
-        if (!foundUser)
-            Print("No User Found");
-        else
-        {
-            string url = $"https://api.jsonbin.io/v3/b/{binid}";
-
-            var res2 = await PutJsonData(url, updatedData);
-
-            Print($"Status code: {res2.StatusCode}");
-
-            dynamic res3 = await MakeReq(url);
-            Print(res3);
-        }
-    }
-    public static async Task<HttpResponseMessage> PutJsonData(string url, PlayerSaveData player)
-    {
-        HttpClient client = new HttpClient();
-        string jsonData = JsonConvert.SerializeObject(player);
-        StringContent content = new StringContent(jsonData, System.Text.Encoding.UTF8, "application/json");
-        client.DefaultRequestHeaders.Add("X-Master-Key", apikey);
-
-        return await client.PutAsync(url, content);
     }
     public void GetSavedData()
     {
@@ -136,16 +100,8 @@ public class PlayerMovement : MonoBehaviour
         this.level = lastSave.Level;
         this.exp = lastSave.EXP;
         this.mobsKilled = lastSave.MobsKilled;
-        CheckLevelUp();
-    }
-    public static async Task<dynamic> MakeReq(string path)
-    {
-        HttpClient client = new HttpClient();
-        client.DefaultRequestHeaders.Add("X-Master-Key", apikey);
-        string res = await client.GetStringAsync(path);
-        dynamic json = JsonConvert.DeserializeObject(res);
 
-        return json!;
+        CheckLevelUp();
     }
     public void CheckLevelUp()
     {

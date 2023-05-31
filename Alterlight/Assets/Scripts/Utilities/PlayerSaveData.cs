@@ -8,4 +8,7 @@ public class PlayerSaveData
     public int Level {get; set;}
     public int EXP {get; set;}
     public int MobsKilled {get; set;}
+    public float seed;
+    public float x;
+    public float y;
 }
